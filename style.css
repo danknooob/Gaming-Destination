@@ -1,0 +1,159 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Add smooth transitions */
+}
+
+body {
+    background-color: #d8dcde; /* Light blue background */
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #3498db, #9b59b6); /* Gradient background */
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(230, 5, 5, 0.2); /* Add subtle shadow */
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #acebe2;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transform: scale(1); /* Initial scale */
+}
+
+.search button:hover {
+    transform: scale(1.1); /* Scale on hover */
+}
+
+.search button img {
+    width: 50px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+    opacity: 0; /* Hide initially */
+    transform: translateY(-20px);
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+    opacity: 0; /* Hide initially */
+    transform: translateY(-20px);
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 80px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 100px;
+    margin: 8px;
+}
+
+.humidity,
+.wind {
+    font-size: 100px;
+    margin-top: -6px;
+    opacity: 0; /* Hide initially */
+    transform: translateY(-20px);
+}
+
+#humidity,
+#humid,
+#wind,
+#windspeed {
+    font-size: 20px;
+    margin-top: -6px;
+    opacity: 0; /* Hide initially */
+    transform: translateY(-20px);
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    display: none;
+    opacity: 0; /* Hide initially */
+    transform: translateY(-20px);
+}
+
+/* Add keyframe animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.card {
+    box-shadow: 0 10px 20px rgba(201, 3, 102, 0.046); /* Added box shadow for depth effect */
+}
+
+.search input {
+    /* ... (previous styles) */
+    box-shadow: 0 5px 10px rgba(201, 3, 102, 0.046); /* Added box shadow for depth effect */
+}
+
+/* Apply animations on specific elements */
+.weather h1,
+.weather h2,
+.humidity,
+.wind,
+#humidity,
+#humid,
+#wind,
+#windspeed,
+.error {
+    animation: fadeIn 0.8s ease-out 0.3s forwards; /* Delayed fadeIn animation */
+}
